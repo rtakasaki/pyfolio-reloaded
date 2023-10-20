@@ -262,7 +262,7 @@ def extract_round_trips(transactions, portfolio_value=None):
         )
 
         roundtrips["date"] = roundtrips.close_dt.apply(
-            lambda x: x.replace(hour=0, minute=0, second=0)
+            lambda x: x.replace(hour=0, minute=0, second=0,microsecond=0)
         )
 
         tmp = (
